@@ -13,5 +13,4 @@ abstract class AppDatabase : RoomDatabase() {
 
     abstract fun githubUserDao(): GithubUserDao
 
-
 }

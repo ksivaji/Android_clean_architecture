@@ -26,8 +26,6 @@ class GithubRepository @Inject constructor(
             PAGE_SIZE,
             boundaryCallback = GithubBoundaryCallback(githubRemoteDataSource, ioCoroutineScope)
         )
-
-
     }
 
 }

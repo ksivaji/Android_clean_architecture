@@ -24,5 +24,4 @@ data class Result<out T>(val status: Status, val data: T?, val message: String?)
         }
     }
 
-
 }
