@@ -4,6 +4,9 @@
 A sample android app showcasing MVVM architecture using Android
 Architecture components.
 
+Used repository pattern with local database (Room) as a single source of
+truth
+
 ![](screenshots/guide-to-app-architecture.png )
 
 
