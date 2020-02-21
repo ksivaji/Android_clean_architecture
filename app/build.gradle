@@ -6,6 +6,15 @@ apply plugin: 'kotlin-android-extensions'
 
 apply plugin: 'kotlin-kapt'
 
+apply plugin: 'de.mannodermaus.android-junit5'
+
+
+tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+}
+
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
@@ -27,6 +36,7 @@ android {
         }
     }
 }
+
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -77,7 +87,19 @@ dependencies {
     implementation "com.google.dagger:dagger-android:$rootProject.daggerVersion"
     implementation "com.google.dagger:dagger-android-support:$rootProject.daggerVersion"
 
-    testImplementation 'junit:junit:4.12'
+//    testImplementation 'junit:junit:4.12'
+
+    // (Required) Writing and executing Unit Tests on the JUnit Platform
+    testImplementation "org.junit.jupiter:junit-jupiter-api:5.4.1"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:5.4.1"
+
+    // (Optional) If you need "Parameterized Tests"
+    testImplementation "org.junit.jupiter:junit-jupiter-params:5.4.1"
+
+    // (Optional) If you also have JUnit 4-based tests
+    testImplementation "junit:junit:4.12"
+    testImplementation "org.junit.vintage:junit-vintage-engine:5.4.1"
+
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 }
