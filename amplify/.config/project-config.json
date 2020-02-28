@@ -1,0 +1,13 @@
+{
+    "projectName": "Android_clean_architecture",
+    "version": "3.0",
+    "frontend": "android",
+    "android": {
+        "config": {
+            "ResDir": "app/src/main/res"
+        }
+    },
+    "providers": [
+        "awscloudformation"
+    ]
+}
