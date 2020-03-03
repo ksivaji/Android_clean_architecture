@@ -1,0 +1,42 @@
+{
+	"providers": {
+		"awscloudformation": {
+			"AuthRoleName": "amplify-androidcleanarchitecture-amplify-120101-authRole",
+			"UnauthRoleArn": "arn:aws:iam::811950385138:role/amplify-androidcleanarchitecture-amplify-120101-unauthRole",
+			"AuthRoleArn": "arn:aws:iam::811950385138:role/amplify-androidcleanarchitecture-amplify-120101-authRole",
+			"Region": "us-east-1",
+			"DeploymentBucketName": "amplify-androidcleanarchitecture-amplify-120101-deployment",
+			"UnauthRoleName": "amplify-androidcleanarchitecture-amplify-120101-unauthRole",
+			"StackName": "amplify-androidcleanarchitecture-amplify-120101",
+			"StackId": "arn:aws:cloudformation:us-east-1:811950385138:stack/amplify-androidcleanarchitecture-amplify-120101/9d5ab7f0-5d70-11ea-b8c4-1208f0f76cbf",
+			"AmplifyAppId": "d3c9uiwxjq0sin"
+		}
+	},
+	"api": {
+		"amplifyDatasource": {
+			"service": "AppSync",
+			"providerPlugin": "awscloudformation",
+			"output": {
+				"authConfig": {
+					"additionalAuthenticationProviders": [],
+					"defaultAuthentication": {
+						"authenticationType": "API_KEY",
+						"apiKeyConfig": {
+							"description": "",
+							"apiKeyExpirationDays": 7
+						}
+					}
+				},
+				"GraphQLAPIIdOutput": "cfns7apwizgh3hja57wqmahyzu",
+				"GraphQLAPIEndpointOutput": "https://4ix7n426mjalbiict43jts3qay.appsync-api.us-east-1.amazonaws.com/graphql",
+				"GraphQLAPIKeyOutput": "da2-sndagwdjnnbgzb2wzgu5atkwom"
+			},
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/amplify-androidcleanarchitecture-amplify-120101-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+				"logicalId": "apiamplifyDatasource"
+			},
+			"lastPushTimeStamp": "2020-03-03T17:05:33.677Z",
+			"lastPushDirHash": "xVOPnOgqDFMsDo160a4HizW2RYw="
+		}
+	}
+}
