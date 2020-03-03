@@ -9,9 +9,9 @@ import com.google.gson.annotations.SerializedName
 data class GithubUser(
     @PrimaryKey
     @field:SerializedName("id")
-    val id :Int,
+    val userId :Int,
     @field:SerializedName("login")
-    val name: String,
+    val userName: String,
     @field:SerializedName("repos_url")
     val repoUrl :String,
     @field:SerializedName("avatar_url")

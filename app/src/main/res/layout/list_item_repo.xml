@@ -4,36 +4,34 @@
     <data>
 
         <variable
-            name="user"
-            type="com.example.githubrepos.data.GithubUser" />
+            name="repository"
+            type="com.example.githubrepos.data.GithubRepo" />
     </data>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:orientation="vertical"
         android:paddingTop="10dp"
         android:paddingBottom="10dp">
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/imageUrl"
-            android:layout_width="76dp"
-            android:layout_height="76dp"
-            android:layout_marginStart="10dp"
-            app:civ_border_color="#FF000000"
-            app:civ_border_width="2dp"
-            app:imageFromUrl="@{user.imageUrl}"
-            tools:src="@tools:sample/avatars" />
-
         <TextView
             android:id="@+id/name"
+            style="@style/TextAppearance.AppCompat.Title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_marginStart="20dp"
-            android:text="@{user.userName}"
+            android:text="@{repository.repoName}"
             tools:text="@tools:sample/full_names" />
+
+        <TextView
+            style="@style/TextAppearance.AppCompat.Subhead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{repository.repoUrl}"
+            tools:text="@tools:sample/last_names" />
 
     </LinearLayout>
 </layout>

@@ -5,7 +5,7 @@ import androidx.room.RoomDatabase
 
 
 @Database(
-    entities = [GithubUser::class],
+    entities = [GithubUser::class, GithubRepo::class],
     version = 1,
     exportSchema = false
 )

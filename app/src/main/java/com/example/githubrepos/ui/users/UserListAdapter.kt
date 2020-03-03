@@ -1,4 +1,4 @@
-package com.example.githubrepos.ui
+package com.example.githubrepos.ui.users
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -9,8 +9,10 @@ import com.example.githubrepos.data.GithubUser
 import com.example.githubrepos.databinding.ListItemUserBinding
 
 
-class UserListAdapter :
-    PagedListAdapter<GithubUser, UserListAdapter.UserViewHolder>(GithubUserDiffCallback()) {
+class UserListAdapter(val viewModel: UserViewModel) :
+    PagedListAdapter<GithubUser, UserListAdapter.UserViewHolder>(
+        GithubUserDiffCallback()
+    ) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserViewHolder {
 
@@ -25,18 +27,19 @@ class UserListAdapter :
 
     override fun onBindViewHolder(holder: UserViewHolder, position: Int) {
         val user = getItem(position)
-        user?.let { holder.bind(it) }
+        user?.let { holder.bind(it, viewModel) }
 
     }
 
     class UserViewHolder(private val binding: ListItemUserBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(githubUser: GithubUser) {
+        fun bind(githubUser: GithubUser, viewModel: UserViewModel) {
             binding.apply {
                 user = githubUser
                 executePendingBindings()
             }
+            itemView.setOnClickListener { viewModel.selectItemEvent.value = githubUser }
         }
     }
 
@@ -44,7 +47,7 @@ class UserListAdapter :
 
 private class GithubUserDiffCallback : DiffUtil.ItemCallback<GithubUser>() {
     override fun areItemsTheSame(oldItem: GithubUser, newItem: GithubUser): Boolean {
-        return oldItem.id == newItem.id
+        return oldItem.userId == newItem.userId
     }
 
     override fun areContentsTheSame(oldItem: GithubUser, newItem: GithubUser): Boolean {

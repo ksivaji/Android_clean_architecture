@@ -21,9 +21,9 @@ class GithubBoundaryCallback(
 
     override fun onItemAtEndLoaded(itemAtEnd: GithubUser) {
         super.onItemAtEndLoaded(itemAtEnd)
-        Timber.i("koya Loading more data")
+        Timber.i("koya Loading more data: useerId: ${itemAtEnd.userId}")
         scope.launch {
-            githubRemoteDataSource.fetchUsers(itemAtEnd.id)
+            githubRemoteDataSource.fetchUsers(itemAtEnd.userId)
         }
     }
 

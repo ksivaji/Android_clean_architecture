@@ -17,7 +17,7 @@ class GithubRemoteDataSource @Inject constructor(
         val response = getResult { service.getUsers(itemId) }
         when (response.status) {
             Result.Status.SUCCESS -> {
-                Timber.i("koya got results. Inserting to Database")
+                Timber.i("koya got results. Inserting to Database: size -> ${response.data!!.size}")
                 dao.insertUsers(response.data!!)
             }
             Result.Status.ERROR -> {

@@ -1,6 +1,7 @@
-package com.example.githubrepos.ui
+package com.example.githubrepos.ui.users
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
@@ -34,6 +35,7 @@ class UserListActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         setupUI()
+        viewModel.getUsers()
         observeList()
     }
 
@@ -42,12 +44,17 @@ class UserListActivity : AppCompatActivity() {
         viewModel.userList.observe(this,
             Observer<PagedList<GithubUser>> { t -> adapter.submitList(t) })
 
+        viewModel.selectItemEvent.observe(this,
+            Observer {
+                Toast.makeText(this, "${it.userName} was clicked", Toast.LENGTH_SHORT).show()
+            })
+
     }
 
     private fun setupUI() {
         val recyclerView = binding.recyclerView
         recyclerView.layoutManager = LinearLayoutManager(this)
-        adapter = UserListAdapter()
+        adapter = UserListAdapter(viewModel)
         recyclerView.adapter = adapter
         recyclerView.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
 
