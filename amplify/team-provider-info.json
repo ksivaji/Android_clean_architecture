@@ -1,0 +1,20 @@
+{
+    "android": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-androidcleanarchitec-android-141432-authRole",
+            "UnauthRoleArn": "arn:aws:iam::811950385138:role/amplify-androidcleanarchitec-android-141432-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::811950385138:role/amplify-androidcleanarchitec-android-141432-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-androidcleanarchitec-android-141432-deployment",
+            "UnauthRoleName": "amplify-androidcleanarchitec-android-141432-unauthRole",
+            "StackName": "amplify-androidcleanarchitec-android-141432",
+            "StackId": "arn:aws:cloudformation:us-east-1:811950385138:stack/amplify-androidcleanarchitec-android-141432/371407e0-5d83-11ea-ad5c-0a99e59b1983",
+            "AmplifyAppId": "d3nrgizc6r1ry7"
+        },
+        "categories": {
+            "auth": {
+                "androidcleanarchitecaf9035dd": {}
+            }
+        }
+    }
+}
