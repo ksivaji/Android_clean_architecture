@@ -3,6 +3,7 @@ package com.example.githubrepos.data
 import com.example.githubrepos.api.BaseDataSource
 import com.example.githubrepos.api.GithubService
 import com.example.githubrepos.api.Result
+import com.example.githubrepos.data.local.GithubUserDao
 import timber.log.Timber
 import javax.inject.Inject
 

@@ -5,7 +5,7 @@ import androidx.room.Room
 import com.example.githubrepos.api.GithubService
 import com.example.githubrepos.data.AppDatabase
 import com.example.githubrepos.data.GithubRemoteDataSource
-import com.example.githubrepos.data.GithubUserDao
+import com.example.githubrepos.data.local.GithubUserDao
 import dagger.Module
 import dagger.Provides
 import kotlinx.coroutines.CoroutineScope
@@ -38,7 +38,7 @@ class AppModule {
 
     @Singleton
     @Provides
-    fun providesGithubRemoteDataSource(service: GithubService, dao:GithubUserDao) = GithubRemoteDataSource(service,dao)
+    fun providesGithubRemoteDataSource(service: GithubService, dao: GithubUserDao) = GithubRemoteDataSource(service,dao)
 
 
     @CoroutineScropeIO

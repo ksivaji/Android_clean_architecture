@@ -11,10 +11,10 @@ import com.amazonaws.mobile.client.UserState
 import com.amazonaws.mobile.client.UserStateDetails
 import com.amazonaws.mobile.client.results.SignInResult
 import com.example.githubrepos.api.Result
-import com.example.githubrepos.data.GithubBoundaryCallback
+import com.example.githubrepos.data.local.GithubBoundaryCallback
 import com.example.githubrepos.data.GithubRemoteDataSource
 import com.example.githubrepos.data.GithubUser
-import com.example.githubrepos.data.GithubUserDao
+import com.example.githubrepos.data.local.GithubUserDao
 import com.example.githubrepos.di.CoroutineScropeIO
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

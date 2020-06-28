@@ -1,10 +1,11 @@
-package com.example.githubrepos.data
+package com.example.githubrepos.data.local
 
 import androidx.paging.DataSource
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
+import com.example.githubrepos.data.GithubUser
 
 @Dao
 interface GithubUserDao {

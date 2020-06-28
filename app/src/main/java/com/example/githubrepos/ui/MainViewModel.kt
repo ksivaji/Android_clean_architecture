@@ -30,7 +30,7 @@ class MainViewModel @Inject constructor(val repository: GithubRepository) : View
     fun onLogoutClick() {
         setStateToLoading()
         viewModelScope.launch {
-            delay(1000)
+//            delay(1000)
             repository.doSignOut()
             updateUserState()
         }
@@ -39,7 +39,7 @@ class MainViewModel @Inject constructor(val repository: GithubRepository) : View
     fun onLoginClick() {
         setStateToLoading()
         viewModelScope.launch {
-            delay(1000)
+//            delay(1000)
             val result = repository.doSignIn(userName.value!!, password.value!!)
             updateUserState()
             /*when (result.status) {

@@ -40,9 +40,9 @@ class UserListActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-//        setupUI()
-//        observeList()
-        setupAmplify()
+        setupUI()
+        observeList()
+//        setupAmplify()
     }
 
     private fun observeList() {

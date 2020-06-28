@@ -1,6 +1,8 @@
-package com.example.githubrepos.data
+package com.example.githubrepos.data.local
 
 import androidx.paging.PagedList
+import com.example.githubrepos.data.GithubRemoteDataSource
+import com.example.githubrepos.data.GithubUser
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 import timber.log.Timber
